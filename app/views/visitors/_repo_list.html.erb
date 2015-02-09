@@ -1,0 +1,24 @@
+<% if owner_found?(@repos) %>
+	<% if @repos.empty? %>
+		<p>No repos available</p>
+	<% else %>
+		<h3>GitHub Details for user - <%= params[:username] %></h3>
+		<p>
+			Date of Joining - <%= format_date(@github_doj)  %>
+		</p>
+		
+		<h3> Repo List </h3>
+		<% @repos.each do |repo| %>
+			<p><%= link_to repo.name, repo.url %></p>
+		<% end %>
+
+		<p class='pdf_exclude'>
+			<%= link_to 'Download PDF', social_profile_path(format: 'pdf') %>
+		</p>
+
+	<% end %>
+<% else %>
+	<p>
+		<%= params[:username] %> - Owner could not be found
+	</p>
+<% end %>

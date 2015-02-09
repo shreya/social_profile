@@ -1,0 +1,22 @@
+<% if owner_found?(@tweets) %>
+	<% if @tweets.empty? %>
+		No tweets available
+	<% else %>
+		<h3>
+			Tweets for user <%= params[:username] %>
+		</h3>
+
+
+		<% @tweets.each do |tweet| %>
+			<p><%= tweet.text %></p>
+		<% end %>
+		<p class='pdf_exclude'>
+			<%= link_to 'Download PDF', social_profile_path(format: 'pdf') %>
+		</p>
+
+	<% end %>
+<% else %>
+	<p>
+		<%= params[:username] %> - Owner could not be found
+	</p>
+<% end %>	

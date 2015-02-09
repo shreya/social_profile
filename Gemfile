@@ -16,8 +16,8 @@ gem 'twitter'
 gem 'github_api'
 gem 'gems'
 gem 'heroku'
-gem 'pdfkit'
-gem 'wkhtmltopdf-binary'
+# gem 'wicked_pdf'
+# gem 'wkhtmltopdf-binary', '0.9.9'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

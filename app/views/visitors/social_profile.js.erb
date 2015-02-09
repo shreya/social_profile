@@ -1,0 +1,9 @@
+<% if params[:type] == 'twitter' %>
+	$('#result').html("<%= escape_javascript(render('tweets')) %>");
+<% elsif params[:type] == 'github' %>
+	$('#result').html("<%= escape_javascript(render('repo_list')) %>");
+<% elsif params[:type] == 'rubygems' %>
+	$('#result').html("<%= escape_javascript(render('gem_list')) %>");
+<% end %>
+
+	

@@ -1,0 +1,18 @@
+
+<%= form_tag social_profile_path, :remote => true, :id => 'social_form' do |f| %>
+	<p>
+		Username: <%= text_field_tag :username, params[:username] %>
+	</p>	
+	<%= hidden_field_tag 'type', nil %>
+	<%= submit_tag 'Latest Tweets', :id => "twitter" %>
+	<%= submit_tag 'Github Repos', :id => "github" %>
+	<%= submit_tag 'Gem List', :id => "rubygems" %>
+	
+	<div id='spinner'>
+		<%= image_tag 'spinny_2x_teaser.gif' %>
+	</div>
+
+	<div id='result'>
+	</div>
+
+<% end %>

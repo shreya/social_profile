@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get 'visitors/index'  => "visitors#index"
-  root :to => "visitors#index"
+  
+  get 'social_profile' => 'visitors#social_profile'
+  post 'social_profile' => 'visitors#social_profile'
+  root :to => "visitors#social_profile"
+
   # The priority is based upon order of creation: first created -> highest priority.
+
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

@@ -23,7 +23,7 @@ module SocialProfile
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.initialize_on_precompile = false
-    config.middleware.use PDFKit::Middleware, :print_media_type => true
+    # config.middleware.use PDFKit::Middleware, :print_media_type => true
     # config.middleware.use WickedPdf::Middleware, :print_media_type => true
   end
 end

@@ -1,4 +1,5 @@
 // import the CSS framework
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 // make all images responsive by default
@@ -81,4 +82,17 @@ section {
 }
 a .navbar-brand {
   font-size: 10px !important;
+}
+
+#spinner{
+  display:none;
+}
+.pdf_exclude{
+  float: right;
+  padding-right: 100px;
+}
+@media print {
+  .pdf_exclude {
+    display: none;
+  }
 }

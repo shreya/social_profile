@@ -1,0 +1,18 @@
+<% if owner_found?(@gem_list) %>
+	<% if @gem_list.empty? %>
+		No gems available
+	<% else %>
+		<h3> Gem List </h3>
+		<% @gem_list.each do |r_gem| %>
+			<p> <%= link_to r_gem["name"], r_gem["homepage_uri"] %></p>
+		<% end %>
+
+		<p class='pdf_exclude'>
+			<%= link_to 'Download PDF', social_profile_path(format: 'pdf') %>
+		</p>
+	<% end %>
+<% else %>
+	<p>
+		<%= params[:username] %> - Owner could not be found
+	</p>
+<% end %>
