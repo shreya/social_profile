@@ -24,5 +24,10 @@ User can enter any username. On submitting the form, it should fetch details fro
        * development - sqlite
        * production - postgresql
 
+== Installation Instructions
+* git clone https://github.com/shreya/social_profile.git
+* bundle install --without production
+* rails s
+
 == Deployment instructions
 Deployed on heroku. Run ' git push heroku master' to upload latest code and restart server
