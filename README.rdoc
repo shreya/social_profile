@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Social Profiler application has the following functionality
+Qser can enter any username. On submitting the form, it should fetch details from the following websites:-
+a) Twitter- last 10 tweets. (if available) 
+b) Github - date of joining, names of repositories (if available)
+c) RubyGems- date of joining, Names of all gems published. (if available)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* Ruby version - 2.1.2p95
+* Rails version - 4.2.0
+* Gems used -
+	Twitter
+	Gems
+	Github
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+	development - sqlite
+	production - postgresql
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+	deployed on heroku 
+	Run ' git push heroku master' to upload latest code and restart server
