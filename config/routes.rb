@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'visitors/index'  => "visitors#index"s
+  get 'visitors/index'  => "visitors#index"
   root :to => "visitors#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
